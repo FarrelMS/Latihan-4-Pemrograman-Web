@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Registration Form Validation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        padding: 40px 20px;
+      }
+      .card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 500px;
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      .form-group {
+        margin-bottom: 5px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 13px;
+        font-weight: bold;
+      }
+      input[type="text"],
+      input[type="password"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        box-sizing: border-box;
+      }
+      textarea {
+        resize: vertical;
+        min-height: 60px;
+      }
+      .error-txt {
+        color: red;
+        font-size: 12px;
+        min-height: 18px;
+        margin-bottom: 5px;
+      }
+      .checkbox-group {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+      }
+      .btn-group {
+        margin-top: 15px;
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        color: white;
+        font-weight: bold;
+      }
+      .btn-send,
+      .btn-reset {
+        background-color: #007bff;
+      }
+      .btn-send:hover,
+      .btn-reset:hover {
+        background-color: #0056b3;
+      }
+      .status-ok {
+        color: green;
+        font-weight: bold;
+        margin-top: 15px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <h2>Registration Form</h2>
+      <form id="formLengkap">
+        <div class="form-group">
+          <label>Name:</label>
+          <input type="text" id="vName" placeholder="Enter your full name" />
+          <div class="error-txt" id="errName"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Address:</label>
+          <input type="text" id="vAddr" placeholder="Enter your address" />
+          <div class="error-txt" id="errAddr"></div>
+        </div>
+
+        <div class="form-group">
+          <label>E-mail Address:</label>
+          <input type="text" id="vMail" placeholder="Enter your email" />
+          <div class="error-txt" id="errMail"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Password:</label>
+          <input type="password" id="vPass" placeholder="Create a password" />
+          <div class="error-txt" id="errPass"></div>
+        </div>
+
+        <div class="form-group">
+          <label>Select Your Course:</label>
+          <select id="vCourse">
+            <option value="">Select Course</option>
+            <option value="Computer Science">Computer Science</option>
+            <option value="Information Systems">Information Systems</option>
+          </select>
+          <div class="error-txt" id="errCourse"></div>
+        </div>
+
+        <div class="form-group">
+          <label>College Name:</label>
+          <textarea id="vCollege" placeholder="Enter college name"></textarea>
+          <div class="error-txt" id="errCollege"></div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="vAgree" />
+          <label for="vAgree" style="margin: 0; font-weight: normal"
+            >I agree to the above information</label
+          >
+        </div>
+        <div class="error-txt" id="errAgree"></div>
+
+        <div class="btn-group">
+          <button type="submit" class="btn-send">Send</button>
+          <button type="reset" id="vReset" class="btn-reset">Reset</button>
+        </div>
+
+        <div id="statusFinal" class="status-ok"></div>
+      </form>
+    </div>
+
+    <script src="latihan3-validasi-form.js"></script>
+  </body>
+</html>
